@@ -9,7 +9,7 @@ node() {
     archive 'target/*.jar'
   }
   stage('Static Code Analysis'){
-    sh 'mvn clean verify sonar:sonar
+    sh 'mvn clean verify sonar:sonar'
     -Dsonar.projectName=example-project
     -Dsonar.projectKey=example-project
     -Dsonar.projectVersion=$BUILD_NUMBER';
